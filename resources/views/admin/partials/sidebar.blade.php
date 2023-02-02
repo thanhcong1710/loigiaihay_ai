@@ -38,7 +38,7 @@ $menus = u::getDataSidebar();
 				@if(empty($menu['sub_menu']))
 				<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
 					<!--begin:Menu link-->
-					<a href="{{ $menu['link'] ? route($menu['link']) : '#' }}">
+					<a href="#">
 						<span class="menu-link">
 							<span class="menu-icon">
 								<i class="fa-solid {{$menu['icon']}}"></i>
@@ -64,7 +64,7 @@ $menus = u::getDataSidebar();
 						<!--begin:Menu item-->
 						<div class="menu-item">
 							<!--begin:Menu link-->
-							<a class="menu-link" href="{{ $sub['link'] ? route($sub['link']) : '#' }}">
+							<a class="menu-link" href="#">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
