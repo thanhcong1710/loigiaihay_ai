@@ -577,3 +577,32 @@
     color: #ffffff;
     background-color: #ffffff;
 }
+i[class].fa-gem{
+    font-size: 18px;
+}
+.fa-gem.active{
+    color: #66bb06;
+}
+.fa-gem.free{
+    color: #06dea7;
+}
+.fa-gem.vip{
+    color: #e14622;
+}
+.form-control .irs--flat .irs-handle>i:first-child {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    margin-left: -10px;
+    background-color: #dd3344;
+    border-radius: 38%;
+    box-shadow: 1px 1px 2px rgb(233 8 8 / 20%), inset 0 0 3px 1px #cd2626;
+}
+[data-kt-app-layout=light-sidebar][data-kt-app-header-fixed=true] .app-header {
+    background-color: #f5f8fa;
+    box-shadow: none;
+    border-bottom: 1px dashed #e4e6ef;
+}

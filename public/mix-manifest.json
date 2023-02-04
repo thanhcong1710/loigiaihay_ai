@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/images/logo_vpb.svg": "/images/logo_vpb.svg",
+    "/images/openai-svgrepo-com.svg": "/images/openai-svgrepo-com.svg",
+    "/images/vpb.png": "/images/vpb.png"
 }

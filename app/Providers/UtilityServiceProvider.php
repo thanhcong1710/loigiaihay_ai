@@ -481,4 +481,19 @@ class UtilityServiceProvider extends ServiceProvider
         }
         return $response;
     }
+    public static function getCoinsByUser($user_id){
+        $user_info = self::first("SELECT coins, coins_fee, (coins+coins_fee) AS coins_total FROM users WHERE id=$user_id");
+        return $user_info;
+    }
+
+    public static function getCoinsByToken($token){
+        if($token > 512){
+            $response = 2;
+        }else if($token > 1024){
+            $response = 3;
+        }else{
+            $response = 1;
+        }
+        return $response;
+    }
 }

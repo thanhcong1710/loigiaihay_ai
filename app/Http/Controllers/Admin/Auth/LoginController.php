@@ -19,9 +19,6 @@ class LoginController extends Controller
         if (Auth::guard('admin')->attempt($credentials)) {
             $user_info = u::first("SELECT * FROM users WHERE id=".Auth::guard('admin')->user()->id);
             $cond_menu = "";
-            if($user_info->is_parent === 1){
-                $cond_menu = " AND id IN(1,2,3)"; 
-            }
             $menus = u::query("SELECT * FROM menus WHERE status=1 AND level=1 $cond_menu ORDER BY stt");
             foreach($menus AS $k=>$menu){
                 $sub_menu = u::query("SELECT * FROM menus WHERE status=1 AND level=2 $cond_menu AND parent_id=$menu->id ORDER BY stt");

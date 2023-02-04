@@ -14,7 +14,7 @@ License: For each use you must have a valid license purchased only from above li
     @include('admin.partials.head')
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+	<body id="kt_app_body" data-kt-app-layout="light-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
 		<!--begin::Theme mode setup on page load-->
 		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
 		<!--end::Theme mode setup on page load-->
@@ -70,33 +70,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Toolbar-->
 							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
 								<!--begin::Toolbar container-->
-								<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
-									<!--begin::Page title-->
-									<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-										<!--begin::Title-->
-										<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Default</h1>
-										<!--end::Title-->
-										<!--begin::Breadcrumb-->
-										<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-											<!--begin::Item-->
-											<li class="breadcrumb-item text-muted">
-												<a href="/index.html" class="text-muted text-hover-primary">Home</a>
-											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
-											<li class="breadcrumb-item">
-												<span class="bullet bg-gray-400 w-5px h-2px"></span>
-											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
-											<li class="breadcrumb-item text-muted">Dashboards</li>
-											<!--end::Item-->
-										</ul>
-										<!--end::Breadcrumb-->
-									</div>
-									<!--end::Page title-->
-									
-								</div>
+								
 								<!--end::Toolbar container-->
 							</div>
 							<!--end::Toolbar-->
