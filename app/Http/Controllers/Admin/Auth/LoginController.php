@@ -12,7 +12,9 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         if ($request->getMethod() == 'GET') {
-            return view('admin.auth.login');
+            return view('admin.auth.login',[
+                'message'=> $request->message 
+            ]);
         }
 
         $credentials = $request->only(['username', 'password']);
@@ -29,9 +31,11 @@ class LoginController extends Controller
             $hkey = Auth::guard('admin')->user()->id."@auth";
             Redis::set($hkey, json_encode($user_info));
             Redis::expire($hkey, $life_time);
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.gpt.add');
         } else {
-            return redirect()->back()->withInput();
+            return redirect()->route('admin.login',[
+                'message'=> 'Thông tin đăng nhập không chính xác.' 
+            ]);
         }
     }
 }

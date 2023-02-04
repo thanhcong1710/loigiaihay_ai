@@ -4,7 +4,7 @@
 
 <head>
     <base href="../../../" />
-    <title>Login</title>
+    <title>Đăng Ký</title>
     <meta charset="utf-8" />
     <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
     <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -62,7 +62,7 @@
             }
         </style>
         <!--end::Page bg image-->
-        <!--begin::Authentication - Sign-in -->
+        <!--begin::Authentication - Sign-up -->
         <div class="d-flex flex-column flex-lg-row flex-column-fluid">
             <!--begin::Aside-->
             <div class="d-flex flex-lg-row-fluid">
@@ -76,12 +76,12 @@
                     <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <!-- <div class="text-gray-600 fs-base text-center fw-semibold">In this kind of post,
+                    <div class="text-gray-600 fs-base text-center fw-semibold">In this kind of post,
                         <a href="#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces a person they’ve interviewed
                         <br />and provides some background information about
                         <a href="#" class="opacity-75-hover text-primary me-1">the interviewee</a>and their
                         <br />work following this is a transcript of the interview.
-                    </div> -->
+                    </div>
                     <!--end::Text-->
                 </div>
                 <!--end::Content-->
@@ -94,38 +94,62 @@
                     <!--begin::Content-->
                     <div class="w-md-400px">
                         <!--begin::Form-->
-                        <form class="form w-100" method="POST" action="{{ route('admin.login') }}">
-                            @csrf
+                        <form class="form w-100" id="kt_sign_up_form" action="{{ route('admin.register') }}" method="POST">
+                        @csrf
                             <!--begin::Heading-->
                             <div class="text-center mb-11">
                                 <!--begin::Title-->
-                                <h1 class="text-dark fw-bolder mb-3">Đăng Nhập</h1>
+                                <h1 class="text-dark fw-bolder mb-3">Đăng Ký Tài Khoản</h1>
                                 <!--end::Title-->
                             </div>
+                            <!--end::Separator-->
                             <!--begin::Input group=-->
                             <div class="fv-row mb-8">
                                 <!--begin::Email-->
-                                <input type="text" placeholder="Tên đăng nhập" name="username" autocomplete="off" class="form-control bg-transparent" />
+                                <input type="text" placeholder="Tên đăng nhập" name="username" autocomplete="off" class="form-control bg-transparent" required/>
                                 <!--end::Email-->
                             </div>
-                            <!--end::Input group=-->
-                            <div class="fv-row mb-3">
-                                <!--begin::Password-->
-                                <input type="password" placeholder="Mật Khẩu" name="password" autocomplete="off" class="form-control bg-transparent" />
-                                <!--end::Password-->
+                            <!--begin::Input group-->
+                            <div class="fv-row mb-8" data-kt-password-meter="true">
+                                <!--begin::Wrapper-->
+                                <div class="mb-1">
+                                    <!--begin::Input wrapper-->
+                                    <div class="position-relative mb-3">
+                                        <input class="form-control bg-transparent" type="password" placeholder="Mật khẩu" name="password" autocomplete="off" required/>
+                                        <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+                                            <i class="bi bi-eye-slash fs-2"></i>
+                                            <i class="bi bi-eye fs-2 d-none"></i>
+                                        </span>
+                                    </div>
+                                    <!--end::Input wrapper-->
+                                    <!--begin::Meter-->
+                                    <div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+                                    </div>
+                                    <!--end::Meter-->
+                                </div>
+                                <!--end::Wrapper-->
+                                <!--begin::Hint-->
+                                <div class="text-muted">Mật khẩu  yêu cầu tối thiểu 8 ký tự</div>
+                                <!--end::Hint-->
                             </div>
-                            <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
-                                <div></div>
-                                <!--begin::Link-->
-                                <a href="#" class="link-primary">Quên mật khẩu?</a>
-                                <!--end::Link-->
+                            <!--end::Input group=-->
+                            <!--end::Input group=-->
+                            <div class="fv-row mb-8">
+                                <!--begin::Repeat Password-->
+                                <input placeholder="Nhập lại mật khẩu" name="confirm_password" type="password" autocomplete="off" class="form-control bg-transparent" />
+                                <!--end::Repeat Password-->
                             </div>
                             <!--end::Input group=-->
+                            
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10">
-                                <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary">
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Đăng Nhập</span>
+                                    <span class="indicator-label">Đăng Ký</span>
                                     <!--end::Indicator label-->
                                     <!--begin::Indicator progress-->
                                     <span class="indicator-progress">Please wait...
@@ -135,9 +159,11 @@
                             </div>
                             <p style="color:red;">{{isset($message) ? $message :'' }}</p>
                             <!--end::Submit button-->
-                            <div class="text-gray-500 text-center fw-semibold fs-6">Chưa có tài khoản?
-                                <a href="{{ route('admin.register') }}" class="link-primary">Đăng ký ngay</a>
+                            <!--begin::Sign up-->
+                            <div class="text-gray-500 text-center fw-semibold fs-6">Đã có tài khoản?
+                                <a href="{{ route('admin.login') }}" class="link-primary fw-semibold">Đăng nhập ngay</a>
                             </div>
+                            <!--end::Sign up-->
                         </form>
                         <!--end::Form-->
                     </div>
@@ -147,8 +173,21 @@
             </div>
             <!--end::Body-->
         </div>
-        <!--end::Authentication - Sign-in-->
+        <!--end::Authentication - Sign-up-->
     </div>
+    <!--end::Root-->
+    <!--begin::Javascript-->
+    <script>
+        var hostUrl = "assets/";
+    </script>
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Custom Javascript(used by this page)-->
+    <script src="assets/js/custom/authentication/sign-up/general.js"></script>
+    <!--end::Custom Javascript-->
+    <!--end::Javascript-->
 </body>
 
 </html>
