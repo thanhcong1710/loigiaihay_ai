@@ -112,6 +112,7 @@
         $("#coins_tmp").val(ruby);
     }
     function submitQuestion(){
+        caculatorRuby()
         $('#message-error').html('');
         if(ruby > $("#total_ruby").val()){
             $("#rubyModal").modal("show");
@@ -119,6 +120,7 @@
             if(!$("#question").val()){
                 $('#message-error').html('Nội dung câu hỏi không để trống.');
             }else{
+                loading();
                 $("#form-question").submit();
             }
         }

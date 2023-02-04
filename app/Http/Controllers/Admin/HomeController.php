@@ -42,6 +42,7 @@ class HomeController extends Controller
             return redirect()->route('admin.register',['message'=>$error]);
         }else{
             $user_id = u::insertSimpleRow(array(
+                'full_name'=>$request->username,
                 'username'=>$request->username,
                 'password'=> Hash::make($request->password),
                 'status'=>1,

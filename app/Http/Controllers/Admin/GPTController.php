@@ -65,9 +65,9 @@ class GPTController extends Controller
                 ),'chat_gpt');
                 $data_update_coins =array(
                     'pre_coins' => $user_coins_info->coins,
-                    'pre_coins_free'=>$user_coins_info->coins_fee,
-                    'coins_free' => $user_coins_info->coins_fee - $coins > 0 ? $user_coins_info->coins_fee - $coins : 0,
-                    'coins' => $user_coins_info->coins_fee - $coins > 0 ? $user_coins_info->coins : $user_coins_info->coins - ($coins - $user_coins_info->coins_fee),
+                    'pre_coins_free'=>$user_coins_info->coins_free,
+                    'coins_free' => $user_coins_info->coins_free - $coins > 0 ? $user_coins_info->coins_free - $coins : 0,
+                    'coins' => $user_coins_info->coins_free - $coins > 0 ? $user_coins_info->coins : $user_coins_info->coins - ($coins - $user_coins_info->coins_free),
                     'user_id' => Auth::guard('admin')->user()->id,
                     'note' => 'Hỏi đáp GPT',
                     'created_at' =>date('Y-m-d H:i:s'),
@@ -90,7 +90,7 @@ class GPTController extends Controller
                     'status'=>2
                 ),'chat_gpt');
             }
-            return redirect(route('admin.gpt.detail',['id'=>$chat_id]));
+            return redirect(route('admin.gpt.detail',['chat_id'=>$chat_id]));
         }
     }
     public function detail(Request $request,$chat_id){
