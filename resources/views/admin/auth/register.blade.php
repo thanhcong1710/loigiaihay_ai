@@ -144,6 +144,7 @@
                             
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10">
+                                <input type="hidden" name="register_code" id="register_code" value=""/>
                                 <button type="submit" class="btn btn-primary">
                                     <!--begin::Indicator label-->
                                     <span class="indicator-label">Đăng Ký</span>
@@ -185,6 +186,28 @@
     <script src="assets/js/custom/authentication/sign-up/general.js"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        $( document ).ready(function() {
+            var register_code = getCookie("lg_register_code");
+            if (register_code != "") {
+                $('#register_code').val(register_code);
+            } 
+        });
+    </script>
 </body>
 
 </html>

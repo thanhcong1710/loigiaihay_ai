@@ -56,7 +56,7 @@
                 <div class="col-lg-6 col-md-12 col-xs-12">
                     <div class="contents">
                         <h2 class="head-title">Hỏi đáp với ChatGPT</h2>
-                        <p>Giải đáp mọi câu hỏi của bạn với công nghệ trí tuệ nhân tạo Chat GPT(Chat Generative Pre-training Transformer)</p>
+                        <p>Giải đáp mọi câu hỏi của bạn với công nghệ trí tuệ nhân tạo Chat GPT (Chat Generative Pre-training Transformer)</p>
                         <div class="header-button">
                             <a href="{{route('admin.register')}}" rel="nofollow" class="btn btn-border-filled">Dùng thử miễn phí ngay</a>
                         </div>
@@ -199,7 +199,21 @@
     <script src="themes/slick/js/form-validator.min.js"></script>
     <script src="themes/slick/js/contact-form-script.js"></script>
     <script src="themes/slick/js/main.js"></script>
-
+<script>
+$( document ).ready(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const register_code = urlParams.get('register_code');
+    if(register_code){
+        setCookie('lg_register_code',register_code,3);
+    }
+});
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+</script>
 </body>
 
 </html>

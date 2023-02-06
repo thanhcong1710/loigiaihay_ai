@@ -46,7 +46,8 @@ class HomeController extends Controller
                 'status'=>1,
                 'created_at'=>date('Y-m-d H:i:s'),
                 'ip_address' => u::get_client_ip(),
-                'coins_free'=>5
+                'coins_free'=>5,
+                'register_code'=>$request->register_code,
             ),'users');
 
             $credentials = $request->only(['username', 'password']);
