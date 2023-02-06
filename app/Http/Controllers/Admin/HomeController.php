@@ -67,4 +67,8 @@ class HomeController extends Controller
             }
         }
     }
+
+    public function dashboard(){
+        return redirect()->route('admin.gpt.add');
+    }
 }

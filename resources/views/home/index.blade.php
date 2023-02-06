@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="themes/slick/css/nivo-lightbox.css">
     <link rel="stylesheet" href="themes/slick/css/main.css">
     <link rel="stylesheet" href="themes/slick/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -81,7 +82,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="services-item text-center">
                         <div class="icon">
-                            <i class="lni-cog"></i>
+                            <i class="fa-solid fa-atom"></i>
                         </div>
                         <h4>Chat GPT</h4>
                         <p style="text-align: justify;">Trả lời mọi câu hỏi của bạn với công nghệ trí tuệ nhân tạo ChatGPT.</p>
@@ -92,7 +93,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="services-item text-center">
                         <div class="icon">
-                            <i class="lni-brush"></i>
+                            <i class="fa-solid fa-book"></i>
                         </div>
                         <h4>Tài liệu</h4>
                         <p style="text-align: justify;">Lời giải chi tiết giúp soạn bài đến lớp các môn toán, ngữ văn, tiếng anh, vật lý, hóa học, sinh học cho tất cả các khối lớp.</p>
@@ -103,7 +104,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="services-item text-center">
                         <div class="icon">
-                            <i class="lni-heart"></i>
+                            <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h4>Luyện tập</h4>
                         <p  style="text-align: justify;">Kho bài tập online với hàng chục nghìn câu hỏi các môn môn toán, ngữ văn, tiếng anh, vật lý, hóa học, sinh học cho tất cả các khối lớp.</p>
@@ -133,10 +134,12 @@
                 <!-- Start Col -->
                 <div class="col-lg-6 col-md-12 pl-4">
                     <div class="business-item-info">
-                        <h3>Crafted For Business, Startup and Agency Websites</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <h3>Loigiai AI - Giải pháp tổng thể hỗ trợ hoạt động dạy và học</h3>
+                        <p style="text-align: justify;">Liên tục phân tích dữ liệu học của học sinh từ đó đưa ra nội dung phù hợp, giúp các bạn học ít tiến bộ nhiều.
+                        Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
+                        Học mọi nơi mọi lúc, trên mọi thiết bị ứng dụng, giúp bạn có thể thiết lập kế hoạch học tập sao cho phù hợp với thời gian riêng của bản thân.</p>
 
-                        <a class="btn btn-common" href="#">download</a>
+                        <a class="btn btn-common" href="{{route('admin.register')}}">Đăng ký ngay</a>
                     </div>
                 </div>
                 <!-- End Col -->

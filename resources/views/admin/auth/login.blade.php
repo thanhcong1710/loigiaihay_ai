@@ -4,7 +4,7 @@
 
 <head>
     <base href="../../../" />
-    <title>Login</title>
+    <title>Lời giải - AI</title>
     <meta charset="utf-8" />
     <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
     <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -73,15 +73,12 @@
                     <img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency-dark.png" alt="" />
                     <!--end::Image-->
                     <!--begin::Title-->
-                    <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
+                    <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Đơn giản, dễ dàng, hiệu quả</h1>
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <!-- <div class="text-gray-600 fs-base text-center fw-semibold">In this kind of post,
-                        <a href="#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces a person they’ve interviewed
-                        <br />and provides some background information about
-                        <a href="#" class="opacity-75-hover text-primary me-1">the interviewee</a>and their
-                        <br />work following this is a transcript of the interview.
-                    </div> -->
+                    <div class="text-gray-600 fs-base text-center fw-semibold">Giải đáp mọi thắc mắc của bạn chỉ với một click, với công nghệ trí tuệ nhận tạo 
+                        <a href="#" class="opacity-75-hover text-primary me-1">ChatGPT</a>. Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
+                    </div>
                     <!--end::Text-->
                 </div>
                 <!--end::Content-->

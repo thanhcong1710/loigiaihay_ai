@@ -42,7 +42,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end::sidebar mobile toggle-->
 						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-							<a href="/index.html" class="d-lg-none">
+							<a href="{{route('admin.dashboard')}}" class="d-lg-none">
 								<img alt="Logo" src="/images/logo_loigiai_ai.png" class="h-50px" />
 							</a>
 						</div>
@@ -67,13 +67,6 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
 						<!--begin::Content wrapper-->
 						<div class="d-flex flex-column flex-column-fluid">
-							<!--begin::Toolbar-->
-							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-								<!--begin::Toolbar container-->
-								
-								<!--end::Toolbar container-->
-							</div>
-							<!--end::Toolbar-->
 							<!--begin::Content-->
 							@yield('body.content') 
 							<!--end::Content-->

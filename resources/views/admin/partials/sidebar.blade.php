@@ -8,7 +8,7 @@ $menus = u::getDataSidebar();
 	<!--begin::Logo-->
 	<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
 		<!--begin::Logo image-->
-		<a href="/index.html">
+		<a href="{{route('admin.dashboard')}}">
 			<img alt="Logo" src="/images/logo_loigiai_ai.png" class="app-sidebar-logo-default"  style="height: 50px"/>
 			<img alt="Logo" src="/images/logo_loigiai_ai.png" class="app-sidebar-logo-minimize"  style="height: 50px"/>
 		</a>
