@@ -13,9 +13,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $user = Auth::guard('admin')->user();
-        // echo 'Xin chào Admin, '. $user->name;
-        return view('admin.dashboard');
+        return view('home.index');
     }
     public function logout()
     {

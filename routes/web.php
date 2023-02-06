@@ -7,11 +7,11 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
+Route::match(['get'], '/', [HomeController::class, 'index'])->name('home.index');
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
 Route::match(['get'], '/logout', [HomeController::class, 'logout'])->name('admin.logout');
 Route::match(['get', 'post'], '/register', [HomeController::class, 'register'])->name('admin.register');
 Route::middleware(['auth:admin','admin:admin'])->group(function (){
-    Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
     Route::get('/gpt', [GPTController::class, 'list'])->name('admin.gpt.list');
     Route::get('/gpt/add', [GPTController::class, 'add'])->name('admin.gpt.add');
     Route::post('/gpt/store', [GPTController::class, 'store'])->name('admin.gpt.store');

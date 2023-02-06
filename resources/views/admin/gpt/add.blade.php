@@ -77,14 +77,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tài khoản của bạn không đủ <i class="fa-solid fa-gem"></i></h5>
             </div>
             <div class="modal-body">
-                ...
+                Tài khoản của bạn không đủ <i style="font-size:14px" class="fa-solid fa-gem"></i>. Vui lòng nạp thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> hoặc đợi để được tặng thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> (Free 5 <i style="font-size:14px" class="fa-solid fa-gem"></i>/ngày sử dụng tới 24h hàng ngày)
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary font-weight-bold">Save changes</button>
+                <a href="{{route('admin.payment.add')}}" class="btn btn-primary font-weight-bold">Nạp <i class="fa-solid fa-gem"></i> ngay</button></a>
             </div>
         </div>
     </div>

@@ -43,7 +43,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="/index.html" class="d-lg-none">
-								<img alt="Logo" src="/assets/media/logos/default-small.svg" class="h-30px" />
+								<img alt="Logo" src="/images/logo_loigiai_ai.png" class="h-50px" />
 							</a>
 						</div>
 						<!--end::Mobile logo-->
