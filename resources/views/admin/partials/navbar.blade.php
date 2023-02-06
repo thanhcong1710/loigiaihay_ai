@@ -57,7 +57,7 @@ $user_info = Admin::getUserInfo();
             <!--end::Menu separator-->
             <!--begin::Menu item-->
             <div class="menu-item px-5 my-1">
-                <a href="/account/settings.html" class="menu-link px-5">Thông tin tài khoản</a>
+                <a href="{{ route('admin.user.info') }}" class="menu-link px-5">Thông tin tài khoản</a>
             </div>
             <div class="menu-item px-5 my-1">
                 <a href="{{ route('admin.payment.list') }}" class="menu-link px-5">Lịch sử giao dịch</a>

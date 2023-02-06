@@ -35,7 +35,7 @@
         </div>
         <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
             <div class="container">
-                <a href="index.html" class="navbar-brand"><img src="themes/slick/img/logo.png" alt="" style="width:186px"></a>
+                <a href="#" class="navbar-brand"><img src="themes/slick/img/logo.png" alt="" style="width:186px"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="lni-menu"></i>
                 </button>
