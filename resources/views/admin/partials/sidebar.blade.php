@@ -61,6 +61,19 @@ $menus = u::getDataSidebar();
 					<!--begin:Menu sub-->
 					<div class="menu-sub menu-sub-accordion" kt-hidden-height="242" style="display: none; overflow: hidden;">
 						@foreach($menu['sub_menu'] AS $sub)
+						@if($sub['link']=='link_1')
+						<!--begin:Menu item-->
+						<div class="menu-item">
+							<!--begin:Menu link-->
+							<a class="menu-link" href="{{route('admin.loigiai.level',['level_id'=>$sub['data_route']])}}">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">{{ $sub['title'] }}</span>
+							</a>
+							<!--end:Menu link-->
+						</div>
+						@else
 						<!--begin:Menu item-->
 						<div class="menu-item">
 							<!--begin:Menu link-->
@@ -72,6 +85,7 @@ $menus = u::getDataSidebar();
 							</a>
 							<!--end:Menu link-->
 						</div>
+						@endif
 						@endforeach
 					</div>
 					<!--end:Menu sub-->

@@ -16,6 +16,11 @@ class UtilityServiceProvider extends ServiceProvider
         $user_info = json_decode(Redis::get($hkey),true);
         return $user_info['menus'];
     }
+    public static function getDataNavbar(){
+        $hkey = Auth::guard('admin')->user()->id."@auth";
+        $user_info = json_decode(Redis::get($hkey),true);
+        return $user_info['nav_items'];
+    }
     public static function query($query, $print = false)
     {
         $resp = null;

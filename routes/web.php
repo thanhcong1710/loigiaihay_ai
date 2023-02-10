@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\GPTController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\LoiGiaiController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get'], '/', [HomeController::class, 'index'])->name('home.index');
@@ -25,4 +26,7 @@ Route::middleware(['auth:admin','admin:admin'])->group(function (){
     Route::get('/user/info', [UserController::class, 'info'])->name('admin.user.info');
     Route::get('/user/edit', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::post('/user/save', [UserController::class, 'save'])->name('admin.user.save');
+    Route::get('/loigiai/level/{level_id}', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
+    Route::get('/loigiai/category/{category_id}', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
+    Route::get('/loigiai/subject/{subject_id}', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
 });
