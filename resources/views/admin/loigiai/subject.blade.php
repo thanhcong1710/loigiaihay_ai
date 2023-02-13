@@ -44,6 +44,15 @@
                 </div>
                 <div class="card-body pt-4 row">
                 {!! $subject_info->noi_dung !!}
+                @if(count($questions))
+                <hr>
+                <h2>Bài Tập Và Hướng Dẫn Giải</h2>
+                    @foreach($questions AS $ques)
+                    {!! $ques->noi_dung !!}
+                    <p><b>Lời giải:</b></p>
+                    {!! $ques->tra_loi !!}
+                    @endforeach
+                @endif
                 </div>
                 <!--end::Body-->
             </div>

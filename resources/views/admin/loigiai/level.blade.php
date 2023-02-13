@@ -53,7 +53,7 @@
                             <!--begin::Description-->
                             <div class="flex-grow-1">
                                 <span class="text-gray-800 text-hover-primary fw-bold fs-6">{{$row->title}}</span>
-                                <span class="text-muted fw-semibold d-block">50 chuyên đề 87 bài tập</span>
+                                <span class="text-muted fw-semibold d-block">{{$row->num_subject}} chuyên đề {{$row->num_question}} bài tập</span>
                             </div>
                             <!--end::Description-->
                         </div>
