@@ -608,7 +608,7 @@ i[class].fa-gem{
 }
 
 @media only screen and (max-device-width: 480px) {
-    .app-container {
+    /* .app-container {
         max-width: none;
         padding-left: 10px!important;
         padding-right: 10px!important;
@@ -621,5 +621,5 @@ i[class].fa-gem{
     }
     .row{
         margin: 0px;
-    }
+    } */
 }

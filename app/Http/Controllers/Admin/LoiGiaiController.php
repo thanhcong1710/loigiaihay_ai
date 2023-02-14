@@ -12,9 +12,23 @@ class LoiGiaiController extends Controller
 {
     public function level(Request $request, $level_id)
     {
-        $list_category = u::query("SELECT * FROM data_category WHERE status=1 AND level=$level_id AND type=1");
+        $list_category = u::query("SELECT c.*,m.title AS mon_hoc FROM data_category AS c LEFT JOIN data_mon_hoc AS m ON m.id=c.mon 
+            WHERE c.status=1 AND c.level=$level_id AND c.type=1 ORDER BY m.stt");
+        $list_mon_hoc = [];
+        $mon_hoc ='';
+        $tmp_arr =[];
+        foreach($list_category AS $row){
+            if($mon_hoc==''&& $row->mon_hoc!=''){
+                $mon_hoc= $row->mon_hoc;
+            }elseif($mon_hoc!=''&& $row->mon_hoc!=$mon_hoc){
+                $list_mon_hoc[$mon_hoc]=$tmp_arr;
+                $tmp_arr=[];
+                $mon_hoc= $row->mon_hoc;
+            }
+            $tmp_arr[]=$row;
+        }
         return view('admin.loigiai.level', [
-            'list_category' => $list_category,
+            'list_mon_hoc' => $list_mon_hoc,
             'category_name' => "Lớp ".$level_id
         ]);
     }

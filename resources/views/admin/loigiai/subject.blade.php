@@ -34,30 +34,27 @@
 <div id="kt_app_content" class="app-content flex-column-fluid">
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container container-fluid">
-        <div class="row">
-            <div class="card card-xl-stretch">
-                <!--begin::Header-->
-                <div class="card-header">
-                    <div class="card-title">
-                        <h3>{{$subject_info->title}}</h3>
-                    </div>
+        <div class="card card-xl-stretch">
+            <!--begin::Header-->
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>{{$subject_info->title}}</h3>
                 </div>
-                <div class="card-body pt-4 row">
-                {!! $subject_info->noi_dung !!}
-                @if(count($questions))
-                <hr>
-                <h2>Bài Tập Và Hướng Dẫn Giải</h2>
-                    @foreach($questions AS $ques)
-                    {!! $ques->noi_dung !!}
-                    <p><b>Lời giải:</b></p>
-                    {!! $ques->tra_loi !!}
-                    @endforeach
-                @endif
-                </div>
-                <!--end::Body-->
             </div>
+            <div class="card-body pt-4 row">
+            {!! $subject_info->noi_dung !!}
+            @if(count($questions))
+            <hr>
+            <h2>Bài Tập Và Hướng Dẫn Giải</h2>
+                @foreach($questions AS $ques)
+                {!! $ques->noi_dung !!}
+                <p><b>Lời giải:</b></p>
+                {!! $ques->tra_loi !!}
+                @endforeach
+            @endif
+            </div>
+            <!--end::Body-->
         </div>
-        <!--end::Content container-->
     </div>
 </div>
 <style>
