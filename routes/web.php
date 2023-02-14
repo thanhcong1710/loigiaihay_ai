@@ -16,19 +16,19 @@ Route::match(['get', 'post'], '/register', [HomeController::class, 'register'])-
 Route::match(['get'], '/craw', [CrawlTech12Controller::class, 'updateImgSubject']);
 Route::middleware(['auth:admin','admin:admin'])->group(function (){
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('/gpt', [GPTController::class, 'list'])->name('admin.gpt.list');
-    Route::get('/gpt/add', [GPTController::class, 'add'])->name('admin.gpt.add');
+    Route::get('/danh-sach-hoi-dap-gpt.html', [GPTController::class, 'list'])->name('admin.gpt.list');
+    Route::get('/hoi-dap-gpt.html', [GPTController::class, 'add'])->name('admin.gpt.add');
     Route::post('/gpt/store', [GPTController::class, 'store'])->name('admin.gpt.store');
     Route::get('/gpt/detail/{chat_id}', [GPTController::class, 'detail'])->name('admin.gpt.detail');
-    Route::get('/payment', [PaymentController::class, 'list'])->name('admin.payment.list');
-    Route::get('/payment/add', [PaymentController::class, 'add'])->name('admin.payment.add');
+    Route::get('/lich-su-giao-dich.html', [PaymentController::class, 'list'])->name('admin.payment.list');
+    Route::get('/nap-ruby.html', [PaymentController::class, 'add'])->name('admin.payment.add');
     Route::get('/payment/create/{fee_id}', [PaymentController::class, 'create'])->name('admin.payment.create');
-    Route::get('/payment/detail/{payment_id}', [PaymentController::class, 'detail'])->name('admin.payment.detail');
+    Route::get('/thong-tin-giao-dich-{payment_id}.html', [PaymentController::class, 'detail'])->name('admin.payment.detail');
     Route::get('/payment/transfer/{payment_id}', [PaymentController::class, 'transfer'])->name('admin.payment.transfer');
-    Route::get('/user/info', [UserController::class, 'info'])->name('admin.user.info');
-    Route::get('/user/edit', [UserController::class, 'edit'])->name('admin.user.edit');
+    Route::get('/thong-tin-tai-khoan.html', [UserController::class, 'info'])->name('admin.user.info');
+    Route::get('/cap-nhat-tai-khoan.html', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::post('/user/save', [UserController::class, 'save'])->name('admin.user.save');
-    Route::get('/loigiai/level/{level_id}', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
+    Route::get('/loi-giai-sgk-lop-{level_id}.html', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
     Route::get('/loigiai/category/{category_id}', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
     Route::get('/loigiai/subject/{subject_id}', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
 });

@@ -606,3 +606,20 @@ i[class].fa-gem{
     box-shadow: none;
     border-bottom: 1px dashed #e4e6ef;
 }
+
+@media only screen and (max-device-width: 480px) {
+    .app-container {
+        max-width: none;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .card .card-header{
+        padding: 0 10px;
+    }
+    .card .card-body{
+        padding: 10px;
+    }
+    .row{
+        margin: 0px;
+    }
+}
