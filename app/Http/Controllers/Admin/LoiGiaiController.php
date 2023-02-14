@@ -33,7 +33,9 @@ class LoiGiaiController extends Controller
         $questions = u::query("SELECT * FROM data_question WHERE subject_id=$subject_id AND type=0 AND status=1");
         return view('admin.loigiai.subject', [
             'subject_info' => $subject_info,
-            'questions' =>$questions
+            'questions' =>$questions,
+            'meta_title'=>$subject_info->title,
+            'meta_description'=>$subject_info->mo_ta
         ]);
     }
 }

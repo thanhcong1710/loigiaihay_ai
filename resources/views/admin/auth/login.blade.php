@@ -6,7 +6,7 @@
     <base href="../../../" />
     <title>{{isset($meta_title) ? $meta_title : "Lời giải AI, lời giải trí tuệ nhân tạo các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý"}}</title>
     <meta charset="utf-8" />
-    <meta name="description" content="{{isset($meta_title) ? $meta_title :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
+    <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
     <meta name="keywords" content="Lời giải AI, lời giải trí tuệ nhân tạo, soạn bài đến lớp, luyện tập, kiểm tra, giải thích, toán, văn, ngoại ngữ, anh, lý, hóa, sinh, sử, địa" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow"/>

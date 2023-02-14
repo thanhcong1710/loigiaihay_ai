@@ -11,6 +11,9 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
+        if(Auth::guard('admin')->check()){
+            return redirect()->route('admin.dashboard');
+        }
         if ($request->getMethod() == 'GET') {
             return view('admin.auth.login',[
                 'message'=> $request->message 
@@ -35,7 +38,7 @@ class LoginController extends Controller
             $hkey = Auth::guard('admin')->user()->id."@auth";
             Redis::set($hkey, json_encode($user_info));
             Redis::expire($hkey, $life_time);
-            return redirect()->route('admin.gpt.add');
+            return redirect()->route('admin.dashboard');
         } else {
             return redirect()->route('admin.login',[
                 'message'=> 'Thông tin đăng nhập không chính xác.' 

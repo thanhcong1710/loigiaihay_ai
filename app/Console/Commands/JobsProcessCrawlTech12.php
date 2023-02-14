@@ -49,10 +49,10 @@ class JobsProcessCrawlTech12 extends Command
         //     $tmp->getSubject2($cat);
         //     echo $cat->id."/";
         // }
-        $subjects = u::query("SELECT s.* FROM data_subject AS s LEFT JOIN data_category AS c ON c.id=s.cat_id WHERe s.status=0 AND c.type=2");
+        $subjects = u::query("SELECT s.* FROM data_subject AS s LEFT JOIN data_category AS c ON c.id=s.cat_id WHERe s.status=0 AND c.type=1");
         $i=0;
         foreach($subjects AS $sub){
-            $tmp->getContentType2($sub);
+            $tmp->getContentType1($sub);
             echo $sub->id."/";
             $i++;
             if($i==10){
