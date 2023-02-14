@@ -50,13 +50,16 @@
         document.head.appendChild(script);
     })();
 </script>
-<!-- <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script>
-  var socket = io('http://103.226.250.52:4000');
-  console.log(socket)
-  
-  socket.on('call_end', function(msg) {
-    console.log(msg);
-  });
-</script> -->
+    var socket = io('https://socket.cmsedu.vn/', {
+        transports: ['websocket', 'polling', 'flashsocket'],
+        secure: true,
+        allowEIO3: true
+    });
+    console.log(socket)
+    socket.on('call_end', function(msg) {
+        console.log(msg)
+    });
+</script>
