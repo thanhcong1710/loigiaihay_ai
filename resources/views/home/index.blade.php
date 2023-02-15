@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://loigiaiai.com" />
     <meta property="og:site_name" content="Lời giải AI" />
     <meta property="og:image" content="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg" />
+    <link rel="image_src" type="image/jpeg" href="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg">
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="themes/slick/img/2.png" type="image/png">
     <!-- Bootstrap CSS -->
