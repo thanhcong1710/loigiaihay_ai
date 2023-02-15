@@ -41,7 +41,7 @@
                     <!--begin::Heading-->
                     <div class="mb-13 text-center">
                         <h1 class="fs-2hx fw-bold mb-5">Lựa Chọn Gói Nạp</h1>
-                        <div class="text-gray-400 fw-semibold fs-5">
+                        <div class="text-gray-800 fw-semibold fs-5">
                             Chính sách ưu đãi trên đây được áp dụng từ <span class="link-primary fw-bold">01/01/2023</span> đến hết <span class="link-primary fw-bold">01/06/2023</span>
                         </div>
                     </div>
@@ -52,12 +52,12 @@
                         <div class="col-xl-3">
                             <div class="d-flex h-100 align-items-center">
                                 <!--begin::Option-->
-                                <div class="w-100 d-flex flex-column flex-center rounded-3 bg-light bg-opacity-75 py-15 px-10">
+                                <div class="w-100 d-flex flex-column flex-center rounded-3 bg-light py-15 px-10">
                                     <!--begin::Heading-->
                                     <div class="mb-7 text-center">
                                         <!--begin::Title-->
                                         <h1 class="text-dark mb-5 fw-bolder">{{$row->title}}</h1>
-                                        <div class="text-gray-400 fw-semibold mb-5">
+                                        <div class="text-gray-800 fw-semibold mb-5">
                                             Nạp ngay {{$row->coins}} ruby<br> chỉ với 
                                         </div>
                                         <div class="text-center">

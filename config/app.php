@@ -231,5 +231,5 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    'coins_free_day' => env('COINS_FREE_DAY',10),
 ];

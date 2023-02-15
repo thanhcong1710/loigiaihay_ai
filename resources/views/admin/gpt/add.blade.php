@@ -110,7 +110,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Tài khoản của bạn không đủ <i class="fa-solid fa-gem"></i></h5>
             </div>
             <div class="modal-body">
-                Tài khoản của bạn không đủ <i style="font-size:14px" class="fa-solid fa-gem"></i>. Vui lòng nạp thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> hoặc đợi để được tặng thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> (Free 5 <i style="font-size:14px" class="fa-solid fa-gem"></i>/ngày sử dụng tới 24h hàng ngày)
+                Tài khoản của bạn không đủ <i style="font-size:14px" class="fa-solid fa-gem"></i>. Vui lòng nạp thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> hoặc đợi để được tặng thêm <i style="font-size:14px" class="fa-solid fa-gem"></i> (Free {{config('app.coins_free_day')}} <i style="font-size:14px" class="fa-solid fa-gem"></i>/ngày sử dụng tới 24h hàng ngày)
             </div>
             <div class="modal-footer">
                 <a href="{{route('admin.payment.add')}}" class="btn btn-primary font-weight-bold">Nạp <i class="fa-solid fa-gem"></i> ngay</button></a>

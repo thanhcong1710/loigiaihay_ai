@@ -42,9 +42,9 @@ class JobsProcessUserData extends Command
     {
         $users = u::query("SELECT * FROM users WHERE status=1");
         foreach($users AS $user){
-            if($user->coins_free < 5){
+            if($user->coins_free < config('app.coins_free_day')){
                 u::updateSimpleRow([
-                    'coins_free'=>5
+                    'coins_free'=>config('app.coins_free_day')
                 ],['id'=>$user->id],'users');
             }
         }
