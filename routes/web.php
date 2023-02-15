@@ -28,7 +28,7 @@ Route::middleware(['auth:admin','admin:admin'])->group(function (){
     Route::get('/thong-tin-tai-khoan.html', [UserController::class, 'info'])->name('admin.user.info');
     Route::get('/cap-nhat-tai-khoan.html', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::post('/user/save', [UserController::class, 'save'])->name('admin.user.save');
-    Route::get('/loi-giai-sgk-lop-{level_id}.html', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
-    Route::get('/loigiai/category/{category_id}', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
-    Route::get('/loigiai/subject/{subject_id}', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
+    Route::get('/loi-giai-sgk/lop-{level_id}.html', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
+    Route::get('/chuyen-de-{category_id}/{slug_cat}.html', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
+    Route::get('/bai-{subject_id}/{slug_subject}.html', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
 });

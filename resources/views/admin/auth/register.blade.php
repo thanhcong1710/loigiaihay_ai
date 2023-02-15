@@ -9,7 +9,7 @@
     <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
     <meta name="keywords" content="Lời giải AI, lời giải trí tuệ nhân tạo, soạn bài đến lớp, luyện tập, kiểm tra, giải thích, toán, văn, ngoại ngữ, anh, lý, hóa, sinh, sử, địa" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="index,follow" />
     <meta property="og:locale" content="vi" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
@@ -24,6 +24,18 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBCLTM046D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TBCLTM046D');
+    </script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -77,7 +89,7 @@
                     <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Đơn giản, dễ dàng, hiệu quả</h1>
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <div class="text-gray-600 fs-base text-center fw-semibold">Giải đáp mọi thắc mắc của bạn chỉ với một click, với công nghệ trí tuệ nhận tạo 
+                    <div class="text-gray-600 fs-base text-center fw-semibold">Giải đáp mọi thắc mắc của bạn chỉ với một click, với công nghệ trí tuệ nhận tạo
                         <a href="#" class="opacity-75-hover text-primary me-1">ChatGPT</a>. Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
                     </div>
                     <!--end::Text-->
@@ -93,7 +105,7 @@
                     <div class="w-md-400px">
                         <!--begin::Form-->
                         <form class="form w-100" id="kt_sign_up_form" action="{{ route('admin.register') }}" method="POST">
-                        @csrf
+                            @csrf
                             <!--begin::Heading-->
                             <div class="text-center mb-11">
                                 <!--begin::Title-->
@@ -104,7 +116,7 @@
                             <!--begin::Input group=-->
                             <div class="fv-row mb-8">
                                 <!--begin::Email-->
-                                <input type="text" placeholder="Tên đăng nhập" name="username" autocomplete="off" class="form-control bg-transparent" required/>
+                                <input type="text" placeholder="Tên đăng nhập" name="username" autocomplete="off" class="form-control bg-transparent" required />
                                 <!--end::Email-->
                             </div>
                             <!--begin::Input group-->
@@ -113,7 +125,7 @@
                                 <div class="mb-1">
                                     <!--begin::Input wrapper-->
                                     <div class="position-relative mb-3">
-                                        <input class="form-control bg-transparent" type="password" placeholder="Mật khẩu" name="password" autocomplete="off" required/>
+                                        <input class="form-control bg-transparent" type="password" placeholder="Mật khẩu" name="password" autocomplete="off" required />
                                         <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
                                             <i class="bi bi-eye-slash fs-2"></i>
                                             <i class="bi bi-eye fs-2 d-none"></i>
@@ -131,7 +143,7 @@
                                 </div>
                                 <!--end::Wrapper-->
                                 <!--begin::Hint-->
-                                <div class="text-muted">Mật khẩu  yêu cầu tối thiểu 8 ký tự</div>
+                                <div class="text-muted">Mật khẩu yêu cầu tối thiểu 8 ký tự</div>
                                 <!--end::Hint-->
                             </div>
                             <!--end::Input group=-->
@@ -142,10 +154,10 @@
                                 <!--end::Repeat Password-->
                             </div>
                             <!--end::Input group=-->
-                            
+
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10">
-                                <input type="hidden" name="register_code" id="register_code" value=""/>
+                                <input type="hidden" name="register_code" id="register_code" value="" />
                                 <button type="submit" class="btn btn-primary">
                                     <!--begin::Indicator label-->
                                     <span class="indicator-label">Đăng Ký</span>
@@ -191,22 +203,22 @@
         function getCookie(cname) {
             let name = cname + "=";
             let ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
+            for (let i = 0; i < ca.length; i++) {
                 let c = ca[i];
                 while (c.charAt(0) == ' ') {
-                c = c.substring(1);
+                    c = c.substring(1);
                 }
                 if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
+                    return c.substring(name.length, c.length);
                 }
             }
             return "";
         }
-        $( document ).ready(function() {
+        $(document).ready(function() {
             var register_code = getCookie("lg_register_code");
             if (register_code != "") {
                 $('#register_code').val(register_code);
-            } 
+            }
         });
     </script>
 </body>

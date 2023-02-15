@@ -44,10 +44,10 @@
                         <div class="d-flex flex-stack">
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <div class="flex-grow-1 me-2">
-                                    <a href="{{route('admin.loigiai.category',['category_id'=>$row->id])}}" class="text-gray-800 text-hover-primary fs-6 fw-bold">{{$row->title}}</a>
+                                    <a href="{{route('admin.loigiai.category',['category_id'=>$row->id,'slug_cat'=>$row->slug])}}" class="text-gray-800 text-hover-primary fs-6 fw-bold">{{$row->title}}</a>
                                     <span class="text-muted fw-semibold d-block fs-7">{{$row->num_subject}} chuyên đề {{$row->num_question}} bài tập</span>
                                 </div>
-                                <a href="{{route('admin.loigiai.category',['category_id'=>$row->id])}}" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="{{route('admin.loigiai.category',['category_id'=>$row->id,'slug_cat'=>$row->slug])}}" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <span class="svg-icon svg-icon-2">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>

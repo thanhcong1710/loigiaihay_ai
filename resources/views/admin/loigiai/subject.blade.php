@@ -21,7 +21,7 @@
                     <span class="bullet bg-gray-400 w-5px h-2px"></span>
                 </li>
                 <li class="breadcrumb-item text-muted">
-                    <a href="{{route('admin.loigiai.category',['category_id'=>$subject_info->cat_id])}}" class="text-muted text-hover-primary">{{$subject_info->cat_title}}</a>
+                    <a href="{{route('admin.loigiai.category',['category_id'=>$subject_info->cat_id,'slug_cat'=>$subject_info->slug_cat])}}" class="text-muted text-hover-primary">{{$subject_info->cat_title}}</a>
                 </li>
             </ul>
             <!--end::Breadcrumb-->

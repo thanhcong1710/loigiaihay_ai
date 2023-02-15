@@ -5,10 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <title>{{isset($meta_title) ? $meta_title : "Lời giải AI, lời giải trí tuệ nhân tạo các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý"}}</title>
-    <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}"/>
+    <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Lời giải AI, lời giải trí tuệ nhân tạo, soạn bài đến lớp, luyện tập, kiểm tra, giải thích, toán, văn, ngoại ngữ, anh, lý, hóa, sinh, sử, địa" />
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="index,follow" />
     <meta property="og:locale" content="vi" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
@@ -112,7 +112,7 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h4>Luyện tập</h4>
-                        <p  style="text-align: justify;">Kho bài tập online với hàng chục nghìn câu hỏi các môn môn toán, ngữ văn, tiếng anh, vật lý, hóa học, sinh học cho tất cả các khối lớp.</p>
+                        <p style="text-align: justify;">Kho bài tập online với hàng chục nghìn câu hỏi các môn môn toán, ngữ văn, tiếng anh, vật lý, hóa học, sinh học cho tất cả các khối lớp.</p>
                     </div>
                 </div>
                 <!-- End Col -->
@@ -141,8 +141,8 @@
                     <div class="business-item-info">
                         <h3>Loigiai AI - Giải pháp tổng thể hỗ trợ hoạt động dạy và học</h3>
                         <p style="text-align: justify;">Liên tục phân tích dữ liệu học của học sinh từ đó đưa ra nội dung phù hợp, giúp các bạn học ít tiến bộ nhiều.
-                        Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
-                        Học mọi nơi mọi lúc, trên mọi thiết bị ứng dụng, giúp bạn có thể thiết lập kế hoạch học tập sao cho phù hợp với thời gian riêng của bản thân.</p>
+                            Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
+                            Học mọi nơi mọi lúc, trên mọi thiết bị ứng dụng, giúp bạn có thể thiết lập kế hoạch học tập sao cho phù hợp với thời gian riêng của bản thân.</p>
 
                         <a class="btn btn-common" href="{{route('admin.register')}}">Đăng ký ngay</a>
                     </div>
@@ -204,21 +204,34 @@
     <script src="themes/slick/js/form-validator.min.js"></script>
     <script src="themes/slick/js/contact-form-script.js"></script>
     <script src="themes/slick/js/main.js"></script>
-<script>
-$( document ).ready(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const register_code = urlParams.get('register_code');
-    if(register_code){
-        setCookie('lg_register_code',register_code,3);
-    }
-});
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  let expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-</script>
+    <script>
+        $(document).ready(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const register_code = urlParams.get('register_code');
+            if (register_code) {
+                setCookie('lg_register_code', register_code, 3);
+            }
+        });
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBCLTM046D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TBCLTM046D');
+    </script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
     <meta name="keywords" content="Lời giải AI, lời giải trí tuệ nhân tạo, soạn bài đến lớp, luyện tập, kiểm tra, giải thích, toán, văn, ngoại ngữ, anh, lý, hóa, sinh, sử, địa" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="index,follow" />
     <meta property="og:locale" content="vi" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
@@ -24,6 +24,18 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBCLTM046D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TBCLTM046D');
+    </script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -77,7 +89,7 @@
                     <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Đơn giản, dễ dàng, hiệu quả</h1>
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <div class="text-gray-600 fs-base text-center fw-semibold">Giải đáp mọi thắc mắc của bạn chỉ với một click, với công nghệ trí tuệ nhận tạo 
+                    <div class="text-gray-600 fs-base text-center fw-semibold">Giải đáp mọi thắc mắc của bạn chỉ với một click, với công nghệ trí tuệ nhận tạo
                         <a href="#" class="opacity-75-hover text-primary me-1">ChatGPT</a>. Ngân hàng câu hỏi và bài giảng các môn Toán, Ngữ văn, Tiếng anh, Vật lý, Hóa học, Sinh học cá nhân hóa cho từng học sinh.
                     </div>
                     <!--end::Text-->

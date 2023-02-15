@@ -50,6 +50,15 @@
         document.head.appendChild(script);
     })();
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBCLTM046D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TBCLTM046D');
+</script>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script>

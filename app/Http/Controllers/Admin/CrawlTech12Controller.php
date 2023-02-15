@@ -384,7 +384,7 @@ class CrawlTech12Controller extends Controller
 
     public function updateImgSubject($subject_info){
         //1296
-        try{
+        // try{
             preg_match_all( '@src="([^"]+)"@' , $subject_info->noi_dung, $match );
             $src = array_pop($match);
             $noi_dung = $subject_info->noi_dung;
@@ -392,20 +392,24 @@ class CrawlTech12Controller extends Controller
                 if(strpos($row,'images/loigiai')===false){
                     $row_t = explode("?",$row);
                     $url = $row_t[0];
-                    if(!strpos('https://tech12h.com',$row) !==false){
+                    if(!strpos($row,'https://tech12h.com') !==false){
                         $url = 'https://tech12h.com'.$url;
                     }
+                    try{
                     $content = file_get_contents($url);
                     $file_name = self::getNameFile($url);
                     $new_file_name = "subject_".$subject_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
                     file_put_contents(__DIR__."/../../../../public/images/loigiai/".$new_file_name, $content);
                     $noi_dung=str_replace($row,'/images/loigiai/'.$new_file_name,$noi_dung);
+                    }catch (Exception $e) {
+                        echo 'Caught exception: ',  $e->getMessage(), "\n";
+                    }
                 }
             }
             u::updateSimpleRow(['noi_dung'=>$noi_dung,'update_img'=>1],['id'=>$subject_info->id],'data_subject');
-        }catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
-        }
+        // }catch (Exception $e) {
+        //     echo 'Caught exception: ',  $e->getMessage(), "\n";
+        // }
     }
 
     public static function getNameFile($url){
@@ -414,28 +418,32 @@ class CrawlTech12Controller extends Controller
         $arr_file_name =  explode('.',$file_name);
         $data = [
             'file_ext'=>$arr_file_name[count($arr_file_name)-1],
-            'file_name'=> str_replace(".".[count($arr_file_name)-1],"",$file_name)
+            'file_name'=> str_replace(".".$arr_file_name[count($arr_file_name)-1],"",$file_name)
         ];
         return $data;
     }
 
     public function updateImgQuestionType0($ques_info){
-        try{
+        // try{
             preg_match_all( '@src="([^"]+)"@' , $ques_info->noi_dung, $match );
             $src = array_pop($match);
             $noi_dung = $ques_info->noi_dung;
             foreach($src AS $row){
-                if(strpos($row,'images/loigiai')===false){
+                if(strpos($row,'images/question')===false && strpos($row,'data:image/png;base64')===false){
                     $row_t = explode("?",$row);
                     $url = $row_t[0];
-                    if(!strpos('https://tech12h.com',$row) !==false){
+                    if(!strpos($row,'https://tech12h.com') !==false && strpos($row,'https')===false && strpos($row,'http')===false){
                         $url = 'https://tech12h.com'.$url;
                     }
-                    $content = file_get_contents($url);
-                    $file_name = self::getNameFile($url);
-                    $new_file_name = "subject_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
-                    file_put_contents(__DIR__."/../../../../public/images/loigiai/".$new_file_name, $content);
-                    $noi_dung=str_replace($row,'/images/loigiai/'.$new_file_name,$noi_dung);
+                    try{
+                        $content = file_get_contents($url);
+                        $file_name = self::getNameFile($url);
+                        $new_file_name = "question_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
+                        file_put_contents(__DIR__."/../../../../public/images/question/".$new_file_name, $content);
+                        $noi_dung=str_replace($row,'/images/question/'.$new_file_name,$noi_dung);
+                    }catch (Exception $e) {
+                        echo 'Caught exception: ',  $e->getMessage(), "\n";
+                    }
                 }
             }
 
@@ -443,21 +451,74 @@ class CrawlTech12Controller extends Controller
             $src_tr = array_pop($match);
             $tra_loi = $ques_info->tra_loi;
             foreach($src_tr AS $row){
-                if(strpos($row,'images/loigiai')===false){
+                if(strpos($row,'images/question')===false && strpos($row,'data:image/png;base64')===false){
                     $row_t = explode("?",$row);
                     $url = $row_t[0];
-                    if(!strpos('https://tech12h.com',$row) !==false){
+                    if(!strpos($row,'https://tech12h.com') !==false  && strpos($row,'https')===false && strpos($row,'http')===false){
+                        $url = 'https://tech12h.com'.$url;
+                    }
+                    try{
+                        $content = file_get_contents($url);
+                        $file_name = self::getNameFile($url);
+                        $new_file_name = "question_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
+                        file_put_contents(__DIR__."/../../../../public/images/question/".$new_file_name, $content);
+                        $tra_loi=str_replace($row,'/images/question/'.$new_file_name,$tra_loi);
+                    }catch (Exception $e) {
+                        echo 'Caught exception: ',  $e->getMessage(), "\n";
+                    }
+                }
+            }
+
+            u::updateSimpleRow(['noi_dung'=>$noi_dung,'tra_loi'=>$tra_loi,'update_img'=>1],['id'=>$ques_info->id],'data_question');
+        // }catch (Exception $e) {
+        //     echo 'Caught exception: ',  $e->getMessage(), "\n";
+        // }
+    }
+
+    public function updateImgQuestionType1($ques_info){
+        try{
+            preg_match_all( '@src="([^"]+)"@' , $ques_info->noi_dung, $match );
+            $src = array_pop($match);
+            $noi_dung = $ques_info->noi_dung;
+            foreach($src AS $row){
+                if(strpos($row,'images/question')===false){
+                    $row_t = explode("?",$row);
+                    $url = $row_t[0];
+                    if(!strpos($row,'https://tech12h.com') !==false  && strpos($row,'https')===false && strpos($row,'http')===false){
                         $url = 'https://tech12h.com'.$url;
                     }
                     $content = file_get_contents($url);
                     $file_name = self::getNameFile($url);
-                    $new_file_name = "subject_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
-                    file_put_contents(__DIR__."/../../../../public/images/loigiai/".$new_file_name, $content);
-                    $tra_loi=str_replace($row,'/images/loigiai/'.$new_file_name,$tra_loi);
+                    $new_file_name = "question_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
+                    file_put_contents(__DIR__."/../../../../public/images/question/".$new_file_name, $content);
+                    $noi_dung=str_replace($row,'/images/question/'.$new_file_name,$noi_dung);
                 }
             }
 
-            u::updateSimpleRow(['noi_dung'=>$noi_dung,'tra_loi'=>$tra_loi,'update_img'=>1],['id'=>$ques_info->id],'data_subject');
+            $tra_loi = json_decode($ques_info->tra_loi,true);
+            foreach($tra_loi AS $k=>$row){
+                $ques_content = $row['content'];
+                preg_match_all( '@src="([^"]+)"@' , $row['content'], $match );
+                $src_tr = array_pop($match);
+                foreach($src_tr AS $row){
+                    if(strpos($row,'images/question')===false){
+                        $row_t = explode("?",$row);
+                        $url = $row_t[0];
+                        if(!strpos($row,'https://tech12h.com') !==false  && strpos($row,'https')===false && strpos($row,'http')===false){
+                            $url = 'https://tech12h.com'.$url;
+                        }
+                        $content = file_get_contents($url);
+                        $file_name = self::getNameFile($url);
+                        $new_file_name = "subject_".$ques_info->id."_".$file_name['file_name'].".".$file_name['file_ext'];
+                        file_put_contents(__DIR__."/../../../../public/images/question/".$new_file_name, $content);
+                        $ques_content=str_replace($row,'/images/question/'.$new_file_name,$ques_content);
+                    }
+                }
+                $tra_loi[$k]['content']=$ques_content;
+            }
+            
+
+            u::updateSimpleRow(['noi_dung'=>$noi_dung,'tra_loi'=>json_encode($tra_loi),'update_img'=>1],['id'=>$ques_info->id],'data_question');
         }catch (Exception $e) {
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }

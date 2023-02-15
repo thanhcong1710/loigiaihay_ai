@@ -50,7 +50,7 @@
                 <?php endif;?>
                 <div class="menu-item p-0 m-0 subject_link">
                     <!--begin:Menu link-->
-                    <a href="{{route('admin.loigiai.subject',['subject_id'=>$subject->id])}}" class="menu-link">
+                    <a href="{{route('admin.loigiai.subject',['subject_id'=>$subject->id,'slug_subject'=>$subject->slug])}}" class="menu-link">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot bg-gray-300i h-6px w-6px"></span>
                         </span>
