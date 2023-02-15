@@ -11,11 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta property="og:locale" content="vi" />
+    <meta property="fb:app_id" content="1252779335655000">
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
-    <meta property="og:url" content="https://loigiaiai.com" />
+    <meta property="og:url" content="https://loigiaiai.com/" />
     <meta property="og:site_name" content="Lời giải AI" />
     <meta property="og:image" content="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg" />
+    <meta property="og:description" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
     <link rel="image_src" type="image/jpeg" href="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg">
     <link rel="canonical" href="https://loigiaiai.com" />
     <link rel="shortcut icon" href="themes/slick/img/2.png" type="image/png">
