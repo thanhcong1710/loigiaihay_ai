@@ -74,13 +74,13 @@
 
                                 <!--begin::Info-->
                                 <div class="d-flex flex-wrap fw-semibold fs-6 mb-4 pe-2">
-                                    <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
+                                    <a href="#" class="d-flex align-items-center text-gray-700 text-hover-primary me-5 mb-2">
                                         <i class="fa-solid fa-user" style="margin-right: 3px;"></i>{{$user_info->username}}
                                     </a>
-                                    <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
+                                    <a href="#" class="d-flex align-items-center text-gray-700 text-hover-primary me-5 mb-2">
                                         <i class="fa-solid fa-envelope" style="margin-right: 3px;"></i>{{$user_info->email}}
                                     </a>
-                                    <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
+                                    <a href="#" class="d-flex align-items-center text-gray-700 text-hover-primary mb-2">
                                         <i class="fa-solid fa-phone" style="margin-right: 3px;"></i>{{$user_info->phone}}
                                     </a>
                                 </div>

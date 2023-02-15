@@ -72,5 +72,8 @@
     a:hover .bullet.bg-secondary {
         background-color: #58c04f !important;
     }
+    .g-xl-10, .gy-xl-10{
+        --bs-gutter-y: 0;
+    }
 </style>
 @stop

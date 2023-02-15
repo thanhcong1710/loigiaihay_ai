@@ -52,8 +52,19 @@
                 {!! $ques->tra_loi !!}
                 @endforeach
             @endif
+                <div class="d-flex justify-content-center">
+                    <a href="{{route('admin.loigiai.category',['category_id'=>$subject_info->cat_id,'slug_cat'=>$subject_info->slug_cat])}}" class="btn btn-secondary" style="margin-right: 10px; width:30%;max-width:200px;">
+                        <i class="fa-solid fa-rotate-left"></i> Quay lại
+                    </a>
+                    @if(isset($subject_next->id))
+                    <a href="{{route('admin.loigiai.subject',['subject_id'=>$subject_next->id,'slug_subject'=>$subject_next->slug])}}" class="btn btn-success" style=" width:30%;max-width:200px;">
+                        Chuyên đề tiếp <i class="fa-solid fa-forward"></i>
+                    </a>
+                    @endif
+                </div>
             </div>
             <!--end::Body-->
+            
         </div>
     </div>
 </div>

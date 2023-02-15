@@ -45,11 +45,13 @@ class LoiGiaiController extends Controller
     {
         $subject_info = u::first("SELECT s.*, c.id AS cat_id,c.title AS cat_title, c.level AS cat_level, c.slug AS slug_cat FROM data_subject AS s LEFT JOIN data_category AS c ON c.id=s.cat_id WHERE s.id= $subject_id");
         $questions = u::query("SELECT * FROM data_question WHERE subject_id=$subject_id AND type=0 AND status=1");
+        $subject_next = u::first("SELECT id,slug FROM data_subject WHERE cat_id= $subject_info->cat_id AND status=1 AND id > $subject_info->id LIMIT 1");
         return view('admin.loigiai.subject', [
             'subject_info' => $subject_info,
             'questions' =>$questions,
             'meta_title'=>$subject_info->title,
-            'meta_description'=>$subject_info->mo_ta
+            'meta_description'=>$subject_info->mo_ta,
+            'subject_next'=>$subject_next
         ]);
     }
 }
