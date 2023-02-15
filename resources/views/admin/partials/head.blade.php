@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://loigiaiai.com" />
   <meta property="og:site_name" content="Lời giải AI" />
   <link rel="canonical" href="https://loigiaiai.com" />
-  <link rel="shortcut icon" href="/assets/media/logos/favicon.ico" />
+  <link rel="shortcut icon" href="themes/slick/img/2.png" type="image/png">
   <!--begin::Fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
   <!--end::Fonts-->
