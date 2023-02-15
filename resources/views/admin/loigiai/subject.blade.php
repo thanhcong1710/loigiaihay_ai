@@ -31,7 +31,7 @@
     </div>
     <!--end::Toolbar container-->
 </div>
-<div id="kt_app_content" class="app-content flex-column-fluid">
+<div id="kt_app_content" class="app-content flex-column-fluid subject-detail">
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container container-fluid">
         <div class="card card-xl-stretch">

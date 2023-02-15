@@ -606,20 +606,18 @@ i[class].fa-gem{
     box-shadow: none;
     border-bottom: 1px dashed #e4e6ef;
 }
-
+.subject-detail td{
+    padding: 5px !important;
+}
+.subject-detail tr td{
+    border-width:1px;
+}
+.subject-detail table{
+    margin-bottom: 10px;
+}
 @media only screen and (max-device-width: 480px) {
-    /* .app-container {
-        max-width: none;
-        padding-left: 10px!important;
-        padding-right: 10px!important;
+    .subject-detail img{
+        width: 100%;
+        height: auto;
     }
-    .card .card-header{
-        padding: 0 10px;
-    }
-    .card .card-body{
-        padding: 10px;
-    }
-    .row{
-        margin: 0px;
-    } */
 }

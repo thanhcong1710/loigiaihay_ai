@@ -72,7 +72,7 @@
                                     <span>Ký tự trả về</span>
                                 </label>
                                 <div class="form-control" style="border:none">
-                                    <input type="text" id="result_token" tabindex="-1" data-min="10" data-max="1024" data-from="256" name="result_token" value="" onchange="caculatorRuby()" />
+                                    <input type="text" id="result_token" tabindex="-1" data-min="10" data-max="1024" data-from="512" name="result_token" value="" onchange="caculatorRuby()" />
                                 </div>
                             </div>
                         </div>
