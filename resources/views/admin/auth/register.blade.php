@@ -3,7 +3,7 @@
 <!--begin::Head-->
 
 <head>
-    <base href="../../../" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{{isset($meta_title) ? $meta_title : "Lời giải AI, lời giải trí tuệ nhân tạo các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý"}}</title>
     <meta charset="utf-8" />
     <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />

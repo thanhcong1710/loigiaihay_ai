@@ -3,6 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <title>{{isset($meta_title) ? $meta_title : "Lời giải AI, lời giải trí tuệ nhân tạo các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý"}}</title>
     <meta name="description" content="{{isset($meta_description) ? $meta_description :'Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý'}}" />
@@ -17,7 +18,6 @@
     <meta property="og:site_name" content="Lời giải AI" />
     <meta property="og:image" content="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg" />
     <meta property="og:description" content="Lời giải AI, lời giải trí tuệ nhân tạo,lời giải chi tiết giúp soạn bài đến lớp các môn toán, văn, anh, lý, hóa, sinh, sử và địa lý" />
-    <link rel="image_src" type="image/jpeg" href="https://loigiaiai.com/themes/slick/img/gpt/banner-ai-gpt.jpeg">
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="themes/slick/img/2.png" type="image/png">
     <!-- Bootstrap CSS -->
