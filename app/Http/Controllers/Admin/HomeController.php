@@ -13,13 +13,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        return view('home.index',[
+            'auth_check'=>Auth::guard('admin')->check()
+        ]);
     }
     public function logout()
     {
         $hkey = Auth::guard('admin')->user()->id."@auth";
         Redis::del($hkey);
-        Auth::logout();
+        Auth::guard('admin')->logout();
         return view('admin.auth.login');
     }
     public function register(Request $request)
@@ -62,6 +64,9 @@ class HomeController extends Controller
                     $menus[$k]->sub_menu = $sub_menu;
                 }
                 $user_info->menus = $menus;
+                $nav_items =  u::query("SELECT  * FROM menus WHERE status=1 AND level=2 AND parent_id=2"); 
+                $user_info->nav_items = $nav_items;
+    
                 $life_time = 3600*8;
                 $hkey = Auth::guard('admin')->user()->id."@auth";
                 Redis::set($hkey, json_encode($user_info));

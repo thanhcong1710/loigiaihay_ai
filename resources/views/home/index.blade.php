@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,12 +50,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                        @if($auth_check)
+                        <li class="nav-item">
+                            <a class="btn btn-singin" href="{{route('admin.dashboard')}}">ĐĂNG NHẬP</a>
+                        </li>
+                        @else
                         <li class="nav-item">
                             <a class="btn btn-singin" href="{{route('admin.login')}}">ĐĂNG NHẬP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('admin.register')}}">ĐĂNG KÝ</a>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>
