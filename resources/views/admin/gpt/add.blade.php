@@ -88,6 +88,7 @@
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" id="code" name="code" value="{{rand()}}">
                     <input type="hidden" id="total_ruby" value="5">
                     <div id="message-error" style="color:red; margin: 10px 0px"></div>
                     <div class="d-flex justify-content-end">
