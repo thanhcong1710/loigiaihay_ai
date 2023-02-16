@@ -24,9 +24,6 @@ class HomeController extends Controller
     }
     public function register(Request $request)
     {
-        if(Auth::guard('admin')->check()){
-            return redirect()->route('admin.dashboard');
-        }
         if ($request->getMethod() == 'GET') {
             return view('admin.auth.register',['message'=>$request->message]);
         }

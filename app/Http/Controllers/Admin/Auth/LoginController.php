@@ -11,9 +11,6 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        if(Auth::guard('admin')->check()){
-            return redirect()->route('admin.dashboard');
-        }
         if ($request->getMethod() == 'GET') {
             return view('admin.auth.login',[
                 'message'=> $request->message 
