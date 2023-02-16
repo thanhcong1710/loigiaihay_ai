@@ -63,6 +63,7 @@ class PaymentController extends Controller
             'status'=>1,
             'updated_at'=>date('Y-m-d H:i:s'),
             'updator_id'=>Auth::guard('admin')->user()->id,
+            'type'=> $request->type
         ),['id'=>$payment_id],'payments');
         return redirect(route('admin.payment.list'));
     }

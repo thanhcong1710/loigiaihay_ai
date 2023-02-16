@@ -630,10 +630,20 @@ body, html {
 .text-muted {
     color: #828282!important;
 }
+.nav-line-tabs .nav-item .nav-link.active, .nav-line-tabs .nav-item .nav-link:hover:not(.disabled), .nav-line-tabs .nav-item.show .nav-link{
+    color: #181C32;
+    border-bottom: 3px solid var(--kt-primary);
+}
+.text-right{
+    text-align: right;
+}
 @media only screen and (max-device-width: 480px) {
     .subject-detail img{
         width: 100%;
         height: auto;
+    }
+    .detail-payment .card .card-body{
+        padding: 0px;
     }
 }
 
