@@ -645,5 +645,8 @@ body, html {
     .detail-payment .card .card-body{
         padding: 0px;
     }
+    .mb-xl-10{
+        margin-bottom: 10px;
+    }
 }
 
