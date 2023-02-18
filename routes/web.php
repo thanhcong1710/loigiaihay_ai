@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LoiGiaiController;
 use App\Http\Controllers\Admin\CrawlTech12Controller;
+use App\Http\Controllers\Admin\BaiTapController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get'], '/', [HomeController::class, 'index'])->name('home.index');
@@ -31,4 +32,5 @@ Route::middleware(['auth:admin','admin:admin'])->group(function (){
     Route::get('/loi-giai-sgk/lop-{level_id}.html', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
     Route::get('/chuyen-de-{category_id}/{slug_cat}.html', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
     Route::get('/bai-{subject_id}/{slug_subject}.html', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
+    Route::match(['get'], '/bai-tap', [BaiTapController::class, 'index']);
 });

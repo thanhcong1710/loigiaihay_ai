@@ -171,11 +171,23 @@
                 <div class="container">
                     <!-- Star Row -->
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="site-info text-center">
+                        <div class="col-md-6">
+                            <div class="site-info text-left">
                                 <p>Crafted by <a href="https://loigiaiai.com" rel="nofollow">Loigiai-AI</a></p>
                             </div>
-
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-footer  text-right"
+                                <a target="_blank" href="#" style="margin-right: 5px;">
+                                    <img width="34" src="/images/share_facebook.png">
+                                </a>
+                                <a href="#" style="margin-right: 5px;">
+                                    <img width="29" src="/images/share_ytb.png">
+                                </a>
+                                <a target="_blank" href="#" style="margin-right: 5px;">
+                                    <img width="34" src="/images/share_tiktok.png">
+                                </a>
+                            </div>
                         </div>
                         <!-- End Col -->
                     </div>

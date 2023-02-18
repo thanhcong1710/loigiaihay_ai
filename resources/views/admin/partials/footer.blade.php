@@ -7,16 +7,22 @@
             <a href="#" target="_blank" class="text-gray-800 text-hover-primary">loigiai-AI</a>
         </div>
         <!--end::Copyright-->
-        <!--begin::Menu-->
+        <!--begin::Menu--> 
         <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
             <li class="menu-item">
-                <a href="#" target="_blank" class="menu-link px-2">About</a>
+                <a href="#" target="_blank" class="menu-link px-2">
+                    <img width="34" src="/images/share_facebook.png">
+                </a>
             </li>
             <li class="menu-item">
-                <a href="#" target="_blank" class="menu-link px-2">Support</a>
+                <a href="#" target="_blank" class="menu-link px-2">
+                    <img width="29" src="/images/share_ytb.png">
+                </a>
             </li>
             <li class="menu-item">
-                <a href="#" target="_blank" class="menu-link px-2">Purchase</a>
+                <a href="#" target="_blank" class="menu-link px-2">
+                    <img width="34" src="/images/share_tiktok.png">
+                </a>
             </li>
         </ul>
         <!--end::Menu-->

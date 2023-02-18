@@ -9,5 +9,8 @@ use App\Providers\UtilityServiceProvider as u;
 
 class BaiTapController extends Controller
 {
-    
+    public function index(Request $request)
+    {
+        return view('admin.baitap.index');
+    }
 }
