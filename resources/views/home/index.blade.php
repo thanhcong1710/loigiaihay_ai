@@ -178,13 +178,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="social-footer  text-right"
-                                <a target="_blank" href="#" style="margin-right: 5px;">
+                                <a target="_blank" href="https://www.facebook.com/H%E1%BB%8Dc-c%C3%B9ng-Ch%E1%BB%8B-Ong-Ch%C3%BAa-AI-100307193000519" style="margin-right: 5px;">
                                     <img width="34" src="/images/share_facebook.png">
                                 </a>
                                 <a href="#" style="margin-right: 5px;">
                                     <img width="29" src="/images/share_ytb.png">
                                 </a>
-                                <a target="_blank" href="#" style="margin-right: 5px;">
+                                <a target="_blank" href="https://www.tiktok.com/@loigiaiai.com?_t=8ZyABqr1Qw6&_r=1" style="margin-right: 5px;">
                                     <img width="34" src="/images/share_tiktok.png">
                                 </a>
                             </div>

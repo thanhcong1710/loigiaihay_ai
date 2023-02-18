@@ -10,7 +10,7 @@
         <!--begin::Menu--> 
         <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
             <li class="menu-item">
-                <a href="#" target="_blank" class="menu-link px-2">
+                <a href="https://www.facebook.com/H%E1%BB%8Dc-c%C3%B9ng-Ch%E1%BB%8B-Ong-Ch%C3%BAa-AI-100307193000519" target="_blank" class="menu-link px-2">
                     <img width="34" src="/images/share_facebook.png">
                 </a>
             </li>
@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#" target="_blank" class="menu-link px-2">
+                <a href="https://www.tiktok.com/@loigiaiai.com?_t=8ZyABqr1Qw6&_r=1" target="_blank" class="menu-link px-2">
                     <img width="34" src="/images/share_tiktok.png">
                 </a>
             </li>
