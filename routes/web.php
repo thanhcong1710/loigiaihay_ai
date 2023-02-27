@@ -32,5 +32,5 @@ Route::middleware(['auth:admin','admin:admin'])->group(function (){
     Route::get('/loi-giai-sgk/lop-{level_id}.html', [LoiGiaiController::class, 'level'])->name('admin.loigiai.level');
     Route::get('/chuyen-de-{category_id}/{slug_cat}.html', [LoiGiaiController::class, 'category'])->name('admin.loigiai.category');
     Route::get('/bai-{subject_id}/{slug_subject}.html', [LoiGiaiController::class, 'subject'])->name('admin.loigiai.subject');
-    Route::match(['get'], '/bai-tap', [BaiTapController::class, 'index']);
+    Route::match(['get'], '/bai-tap', [BaiTapController::class, 'question']);
 });
